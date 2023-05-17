@@ -18,7 +18,9 @@ let mostrarTiempo = document.getElementById("t-restante");
 
 // Generacion de numeros aleatorios
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
-numeros = numeros.sort(() => { return Math.random() - 0.5 });
+numeros = numeros.sort(() => {
+  return Math.random() - 0.5;
+});
 console.log(numeros);
 
 // Funciones
@@ -29,15 +31,15 @@ function contarTiempo() {
     mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`;
     if (timer == 0) {
       clearInterval(tiempoRegresivoId);
-bloquearTarjeta();
+      bloquearTarjeta();
     }
-  }, 1000)
+  }, 1000);
 }
 
-function bloquearTarjeta(){
-  for (let i = 0; i <= 15; i++){
+function bloquearTarjeta() {
+  for (let i = 0; i <= 15; i++) {
     let tarjetaBloqueada = document.getElementById(i);
-    tarjetaBloqueada.innerHTML = `<img src="./imagenes/${numeros[i]}.jpg" alt ="">}`;
+    tarjetaBloqueada.innerHTML = `<img src="./imagenes/${numeros[i]}.jpg" alt ="">`;
     tarjetaBloqueada.disabled = true;
   }
 }
@@ -82,11 +84,12 @@ function destapar(id) {
 
       if (aciertos == 8) {
         clearInterval(tiempoRegresivoId);
-        mostrarAciertos.innerHTML = `Aciertos: ${aciertos} WOOOO`
-        mostrarTiempo.innerHTML = `Solo demoraste ${timerInicial - timer} segundos`
-        mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} EXCELENTE`
+        mostrarAciertos.innerHTML = `Aciertos: ${aciertos} WOOOO`;
+        mostrarTiempo.innerHTML = `Solo demoraste ${
+          timerInicial - timer
+        } segundos`;
+        mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} EXCELENTE`;
       }
-
     } else {
       // Mostrar momentaneamoente valores y volver a tapar
       setTimeout(() => {
@@ -95,11 +98,9 @@ function destapar(id) {
         tarjeta1.disabled = false;
         tarjeta2.disabled = false;
         tarjetasDestapadas = 0;
-      }, 800)
-
+      }, 800);
     }
   }
 }
-
 
 //47
