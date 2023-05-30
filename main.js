@@ -102,5 +102,3 @@ function destapar(id) {
     }
   }
 }
-
-//47

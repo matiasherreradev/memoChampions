@@ -1,13 +1,8 @@
 body {
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(252, 176, 69, 1) 27%,
-    rgba(253, 29, 29, 1) 100%
-  );
+  background-image: url("./imagenes/stadium.jpg");
+  background-size: fill;
   font-family: sans-serif;
-  color: #fff;
+  color: #111;
 }
 main {
   width: 730px;
@@ -27,14 +22,14 @@ button {
   height: 130px;
   width: 130px;
   font-size: 40px;
-  color: #fff;
+  color: #111;
   font-weight: bold;
 }
 button:hover {
   cursor: pointer;
 }
 .section2 {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   width: 250px;
@@ -42,7 +37,7 @@ button:hover {
   padding: 0 20px;
 }
 .estadisticas {
-  border: solid 1px white;
+  border: solid 1px black;
   height: 105px;
   border-radius: 8px;
   padding: 8px 20px;
